@@ -13,7 +13,7 @@ const Hero = () => {
                 <span className="block text-indigo-600">Hire Freelance Talent with Confidence</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Stop risking your projects on unverified technical talent. KYD provides automated identity, skill, and security verification for freelance developers, protecting your business from fraud, compliance risks, and poor code quality.
+                Stop risking your projects on unverified technical talent. KYD™ provides automated identity, skill, and security verification for freelance developers, protecting your business from fraud, compliance risks, and poor code quality.
               </p>
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <a

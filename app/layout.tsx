@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'KYD - Know Your Developer™',
   description: 'Safeguard your projects with KYD',
+  authors: [{ name: 'Harrison Oliver', url: 'https://www.linkedin.com/in/harrisondoliver/' }],
 }
 
 export default function RootLayout({

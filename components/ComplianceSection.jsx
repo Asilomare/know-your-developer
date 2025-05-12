@@ -7,7 +7,7 @@ const ComplianceSection = () => {
     {
       id: 1,
       name: 'NIST Digital Identity Guidelines (SP 800-63)',
-      description: 'KYD brings NIST principles for verifying digital identities to freelance hiring, enhancing security.',
+      description: 'KYD™ brings NIST principles for verifying digital identities to freelance hiring, enhancing security.',
       icon: Fingerprint
     },
     {
@@ -37,14 +37,14 @@ const ComplianceSection = () => {
   ];
 
   return (
-    <section id="compliance" className="py-16 bg-gray-50 sm:py-24">
+    <section id="compliance" className="py-16 bg-white sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/compliance" className="group block text-center mb-12 hover:cursor-pointer">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl group-hover:text-indigo-600 transition-colors">
             Security & Compliance Alignment
           </h2>
           <p className="mt-4 text-lg text-gray-500 group-hover:text-indigo-500 transition-colors">
-            KYD reinforces freelance marketplaces, helping businesses in regulated industries or those handling sensitive data meet growing standards for software supply chains and remote labor sourcing. <span className="text-indigo-600 font-medium">Learn more &rarr;</span>
+            KYD™ reinforces freelance marketplaces, helping businesses in regulated industries or those handling sensitive data meet growing standards for software supply chains and remote labor sourcing. <span className="text-indigo-600 font-medium">Learn more &rarr;</span>
           </p>
         </Link>
         
@@ -67,14 +67,14 @@ const ComplianceSection = () => {
           })}
         </dl>
          <p className="mt-12 text-center text-lg text-gray-600">
-            From startups to agencies supporting federal clients, KYD provides peace of mind and proactive protection.
+            From startups to agencies supporting federal clients, KYD™ provides peace of mind and proactive protection.
           </p>
           <div className="mt-10 text-center">
             <Link 
               href="/compliance"
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-transform hover:scale-105"
             >
-              Explore KYD Compliance by Industry
+              Explore KYD™ Compliance by Industry
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>

@@ -26,7 +26,7 @@ const formSchema = z.object({
       return !blockedEmailDomains.includes(domain.toLowerCase());
     }, "Please use your business email address. We do not accept free or common, personal-use email providers."),
   role: z.string().min(1, "Let us know your role or title at the company."),
-  helpAreas: z.array(z.string()).min(1, "Please select at least one area where KYD can support you."),
+  helpAreas: z.array(z.string()).min(1, "Please select at least one area where KYD™ can support you."),
   otherHelpArea: z.string().optional(),
   industry: z.string().min(1, "Please select your industry."),
   message: z.string().optional(),
@@ -257,10 +257,10 @@ const WaitlistSection = () => {
       <div className="max-w-3xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            Get Started with KYD
+            Get Started with KYD™
           </h2>
           <p className="mt-4 text-lg leading-6 text-indigo-200">
-            Fill out the form below to join our waitlist and be among the first to experience KYD&apos;s solution.
+            Fill out the form below to join our waitlist and be among the first to experience KYD™&apos;s solution.
           </p>
         </div>
         
@@ -376,11 +376,11 @@ const WaitlistSection = () => {
               </div>
             </div>
 
-            {/* How can KYD help you? */}
+            {/* How can KYD™ help you? */}
             <div className="sm:col-span-2">
               <fieldset>
                 <legend className="block text-sm font-medium text-gray-700">
-                  How can KYD help you? <span className="text-red-500">*</span>
+                  How can KYD™ help you? <span className="text-red-500">*</span>
                 </legend>
                 <div className="mt-2 space-y-2">
                   {helpAreasOptions.map((option) => (
@@ -413,7 +413,7 @@ const WaitlistSection = () => {
                       name="otherHelpArea"
                       value={formData.otherHelpArea}
                       onChange={handleChange}
-                      placeholder="Please specify other ways KYD can help"
+                      placeholder="Please specify other ways KYD™ can help"
                       className="block w-full rounded-md border-gray-300 shadow-sm py-2 px-3 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     />
                   </div>
@@ -457,7 +457,7 @@ const WaitlistSection = () => {
                 </div>
                 <div className="ml-3 text-sm">
                   <label htmlFor="privacyConsent" className="text-gray-700">
-                    I agree to KYD&apos;s data collection practices and <button type="button" onClick={() => setIsPrivacyModalOpen(true)} className="text-indigo-600 hover:text-indigo-500 font-medium focus:outline-none focus:underline">Privacy Policy</button>.
+                    I agree to KYD™&apos;s data collection practices and <button type="button" onClick={() => setIsPrivacyModalOpen(true)} className="text-indigo-600 hover:text-indigo-500 font-medium focus:outline-none focus:underline">Privacy Policy</button>.
                   </label>
                 </div>
               </div>
@@ -498,9 +498,9 @@ const WaitlistSection = () => {
       <InfoModal 
         isOpen={isPrivacyModalOpen} 
         onClose={() => setIsPrivacyModalOpen(false)} 
-        title="KYD Data Collection Practices"
+        title="KYD™ Data Collection Practices"
       >
-        <p>KYD collects the information you submit through this form for the purpose of qualifying interest in our services. In addition to the information you provide, we automatically collect the following session-level metadata:</p>
+        <p>KYD™ collects the information you submit through this form for the purpose of qualifying interest in our services. In addition to the information you provide, we automatically collect the following session-level metadata:</p>
         <ul className="list-disc list-inside space-y-1 pl-4">
             <li>Your IP address</li>
             <li>Approximate geolocation (country, region, city)</li>

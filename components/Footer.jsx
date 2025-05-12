@@ -75,7 +75,7 @@ const Footer = () => {
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact</h3>
                 <ul role="list" className="mt-4 space-y-4 text-base text-gray-300">
                   <li>
-                    <p>Harrison Oliver, CEO</p>
+                    {/* <p>Harrison Oliver, CEO</p> */}
                     <p>Know Your Developer™</p>
                   </li>
                   <li>Email: <a href="mailto:contact@knowyourdeveloper.ai" className="hover:text-white">contact@knowyourdeveloper.ai</a></li>
@@ -100,7 +100,7 @@ const Footer = () => {
         title="Privacy Policy"
       >
         {/* Reusing the same content from SignupSection for demonstration */}
-        <p>KYD collects the information you submit through the waitlist form for the purpose of qualifying interest in our services. In addition to the information you provide, we automatically collect session-level metadata like IP address, approximate geolocation, browser/device details, language, referral URL, and submission time.</p>
+        <p>KYD™ collects the information you submit through the waitlist form for the purpose of qualifying interest in our services. In addition to the information you provide, we automatically collect session-level metadata like IP address, approximate geolocation, browser/device details, language, referral URL, and submission time.</p>
         <p>This information is used to protect against spam, understand our audience, improve marketing, and respond effectively. Data is stored securely, accessed only by authorized personnel, and not sold or shared without consent.</p>
         <p>Submitting the waitlist form implies consent to this data collection. We utilize standard web technologies like cookies for site functionality and analytics.</p>
         {/* TODO: Add full privacy policy text here */}
@@ -113,7 +113,7 @@ const Footer = () => {
         onClose={() => setIsTermsModalOpen(false)} 
         title="Terms of Service"
       >
-        <p>These are the terms and conditions governing the use of the Know Your Developer™ (KYD) website and future services.</p>
+        <p>These are the terms and conditions governing the use of the Know Your Developer™ (KYD™) website and future services.</p>
         {/* TODO: Add full terms of service text here */}
         {/* <p className="mt-4 font-semibold">Please replace this with the full, official Terms of Service content.</p> */}
       </InfoModal>

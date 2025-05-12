@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import ProblemSection from '@/components/ProblemSection';
 import SolutionSection from '@/components/SolutionSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import PatentPendingSection from '@/components/PatentPendingSection';
 import ComplianceSection from '@/components/ComplianceSection';
 import CredibilitySection from '@/components/CredibilitySection';
 import SignupSection from '@/components/SignupSection';
@@ -18,6 +19,7 @@ export default function Home() {
         <ProblemSection />
         <SolutionSection />
         <FeaturesSection />
+        <PatentPendingSection />
         <ComplianceSection />
         <CredibilitySection />
       </main>
