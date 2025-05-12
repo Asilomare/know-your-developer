@@ -1,6 +1,6 @@
 export const complianceData = {
   mainPage: {
-    title: "KYD Compliance Mapping by Industry",
+    title: "KYD Solutions by Industry",
     introParagraph: "KYD empowers organizations to meet diverse compliance obligations by providing robust developer identity validation, comprehensive risk detection, and fostering trust-based decision-making throughout the hiring and engagement lifecycle. Discover how KYD aligns with specific industry standards below.",
   },
   industries: [
@@ -84,6 +84,45 @@ export const complianceData = {
         { feature: "Screen for export control and dual-use risk", regulations: "EAR, CHIPS Act, EU AI Act", details: "Maps developer location and flags export-sensitive affiliations" },
         { feature: "Flag LLM-generated or AI-assisted contributions", regulations: "EU AI Act, EO 14028, ISO/IEC 42001", details: "Surfaces statistical indicators of code generation by LLMs" },
         { feature: "Provide audit trail for contributor access", regulations: "SOC 2, ISO/IEC 27701, EAR", details: "Generates evidence-based access scoring and event tracking" },
+      ],
+    },
+    {
+      slug: "retail-ecommerce",
+      name: "Retail & E-Commerce",
+      headline: "Retail & E-Commerce Compliance with KYD",
+      overviewParagraph: "The retail and e-commerce sector handles vast amounts of consumer data and processes payments, necessitating compliance with standards like GDPR, CCPA, and PCI DSS. KYD assists these businesses by verifying developer identities, screening for sanctions risks, providing audit trails for payment system access, analyzing geographic risks, and logging developer trust data to support secure and lawful operations.",
+      complianceTable: [
+        { feature: "Sanctions Screening", regulations: "OFAC, EU Sanctions, ITAR, EAR", details: "Prevents onboarding developers from embargoed countries who may access e-commerce infrastructure, logistics systems, or payment platforms" },
+        { feature: "Identity Verification", regulations: "GDPR (Art. 32), ISO/IEC 27001 A.7.1.1, CCPA (1798.100(d))", details: "Supports lawful processing by ensuring access to consumer data is limited to verified, legitimate developers" },
+        { feature: "Public Code Footprint Scoring", regulations: "PCI DSS v4.0 (6.3.1, 6.4.2)", details: "Provides audit trail and risk insights for developers touching systems that handle cardholder data" },
+        { feature: "Country/IP-Based Risk Analysis", regulations: "EU GDPR (Recital 49) (processing for security), SOC 2 (Common Criteria 6.2)", details: "Flags geographic access risks and informs adaptive controls for vendor-managed software" },
+        { feature: "Developer Risk Logging", regulations: "CCPA (Audit Trail for PI Disclosure Requests), GDPR (Accountability Principle)", details: "Provides an audit-ready, timestamped record of developer trustworthiness and screening rationale" },
+      ],
+    },
+    {
+      slug: "hospitality-travel",
+      name: "Hospitality & Travel",
+      headline: "Hospitality & Travel Compliance with KYD",
+      overviewParagraph: "Hospitality and travel companies manage sensitive PII, booking details, and loyalty program data, requiring adherence to GDPR, SOC 2, and international data transfer rules. KYD enables compliance by validating developer identities accessing these platforms, screening against sanctions lists, analyzing developer behavior and location for risks, and providing audit records for due diligence.",
+      complianceTable: [
+        { feature: "Sanctions Screening", regulations: "OFAC, UK OFSI, EU Restrictive Measures, UN Consolidated List", details: "Avoids reputational and financial risk by ensuring devs building booking or loyalty platforms are not listed or affiliated with embargoed jurisdictions" },
+        { feature: "Identity Validation", regulations: "GDPR (Art. 32 + Recital 39), SOC 2 (CC 6.2, 6.3)", details: "Ensures only appropriately vetted developers access platforms handling PII and sensitive location data" },
+        { feature: "Developer Behavior Analysis", regulations: "ISO/IEC 27034 (App Security Controls), NIST 800-53 (CM-5)", details: "Detects risky coding behaviors or identity inconsistencies in outsourced contractors" },
+        { feature: "Developer Location Screening", regulations: "GDPR (Cross-border Data Transfer Rules), EU SCCs, UK International Data Transfer Agreement", details: "Flags developers based in jurisdictions with inadequate privacy protections" },
+        { feature: "KYD Score as Audit Record", regulations: "CCPA (1798.105(c)), GDPR (Art. 30 – Records of Processing Activities)", details: "Provides proof that risk-based access and due diligence were performed prior to engagement" },
+      ],
+    },
+    {
+      slug: "small-business-startups",
+      name: "Small Business / Startups",
+      headline: "Small Business / Startups Compliance with KYD",
+      overviewParagraph: "Startups and small businesses often rely on freelance or offshore developers, introducing unique compliance challenges related to KYC/AML, data privacy (GDPR), and basic security practices (SOC 2, NIST CSF). KYD provides accessible solutions for verifying developer identity, screening for sanctions, assessing jurisdictional risks, leveraging public code history for vetting, and generating audit logs needed for cyber insurance or vendor reviews.",
+      complianceTable: [
+        { feature: "Sanctions Screening", regulations: "OFAC, EU Sanctions, Bank KYC/AML requirements", details: "Helps small businesses avoid unintentional violations by contractors working on payments, shipping, or customer data platforms" },
+        { feature: "Identity Verification", regulations: "GDPR (Art. 5, 32), SOC 2 (CC6.3 – Logical Access)", details: "Provides basic assurance that offshore or freelance developers are who they say they are" },
+        { feature: "GitHub & Stack History", regulations: "ISO/IEC 27002 (8.1.4 – User Responsibilities)", details: "Serves as a lightweight proxy for professional background checks when hiring remotely or via Upwork/Fiverr" },
+        { feature: "KYD Score Logging", regulations: "Cyber insurance underwriting questionnaires, SOC 2 (CC7.2)", details: "Offers a low-friction audit trail that can be reused for vendor reviews or incident response documentation" },
+        { feature: "Developer Country/IP Risk", regulations: "NIST CSF (PR.AC-6), GDPR (cross-border transfers)", details: "Helps founders identify jurisdictional risks when sharing code or customer data with remote contributors" },
       ],
     }
   ]

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { z } from 'zod';
 import toast from 'react-hot-toast';
+import InfoModal from './InfoModal';
 
 // Define blocked email domains
 const blockedEmailDomains = [
@@ -28,9 +29,6 @@ const formSchema = z.object({
   helpAreas: z.array(z.string()).min(1, "Please select at least one area where KYD can support you."),
   otherHelpArea: z.string().optional(),
   industry: z.string().min(1, "Please select your industry."),
-  sampleReport: z.enum(["yes", "no"], {
-    required_error: "Please tell us if you'd like to receive a sample KYD report."
-  }),
   message: z.string().optional(),
   privacyConsent: z.literal(true, {
     errorMap: () => ({ message: "You must accept the Privacy Policy to submit the form." })
@@ -52,7 +50,6 @@ const initialFormData = {
   helpAreas: [],
   otherHelpArea: '',
   industry: '',
-  sampleReport: '',
   message: '',
   privacyConsent: false,
   // Added for submission data
@@ -427,48 +424,6 @@ const WaitlistSection = () => {
               </fieldset>
             </div>
 
-            {/* Would you like a sample report? */}
-            <div className="sm:col-span-2">
-              <fieldset>
-                <legend className="block text-sm font-medium text-gray-700">
-                  Would you like a sample report? <span className="text-red-500">*</span>
-                </legend>
-                <div className="mt-2 space-y-2">
-                  <div className="flex items-center">
-                    <input
-                      id="sample-yes"
-                      name="sampleReport"
-                      type="radio"
-                      value="yes"
-                      checked={formData.sampleReport === 'yes'}
-                      onChange={handleChange}
-                      className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
-                    />
-                    <label htmlFor="sample-yes" className="ml-3 block text-sm text-gray-700">
-                      Yes, I&apos;d like to see a sample report
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      id="sample-no"
-                      name="sampleReport"
-                      type="radio"
-                      value="no"
-                      checked={formData.sampleReport === 'no'}
-                      onChange={handleChange}
-                      className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
-                    />
-                    <label htmlFor="sample-no" className="ml-3 block text-sm text-gray-700">
-                      No, not at this time
-                    </label>
-                  </div>
-                </div>
-                {errors.sampleReport && (
-                  <p className="mt-1 text-sm text-red-600">{errors.sampleReport}</p>
-                )}
-              </fieldset>
-            </div>
-
             {/* Message / Additional Info */}
             <div className="sm:col-span-2">
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
@@ -539,51 +494,27 @@ const WaitlistSection = () => {
         </p>
       </div>
 
-      {/* Privacy Policy Modal */}
-      {isPrivacyModalOpen && (
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-40 flex items-center justify-center p-4" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-          <div className="bg-white rounded-lg shadow-xl transform transition-all sm:max-w-2xl sm:w-full p-6">
-            <div className="flex items-start justify-between mb-4">
-                <h3 className="text-2xl font-semibold text-gray-900" id="modal-title">
-                    KYD Data Collection Practices
-                </h3>
-                <button 
-                    type="button" 
-                    onClick={() => setIsPrivacyModalOpen(false)} 
-                    className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
-                    aria-label="Close modal"
-                >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                </button>
-            </div>
-            <div className="text-sm text-gray-600 space-y-3">
-                <p>KYD collects the information you submit through this form for the purpose of qualifying interest in our services. In addition to the information you provide, we automatically collect the following session-level metadata:</p>
-                <ul className="list-disc list-inside space-y-1 pl-4">
-                    <li>Your IP address</li>
-                    <li>Approximate geolocation (country, region, city)</li>
-                    <li>Browser type and version</li>
-                    <li>Device type (e.g., mobile, desktop)</li>
-                    <li>Operating system</li>
-                    <li>Preferred browser language</li>
-                    <li>Referral URL</li>
-                    <li>Time of submission (UTC)</li>
-                </ul>
-                <p>This information is used to protect against spam, understand who is contacting us, improve our marketing efforts, and deliver relevant responses to legitimate business contacts.</p>
-                <p>All data is stored securely and is only accessible to authorized team members. We do not sell your personal information or share it with third parties without your consent.</p>
-                <p>By submitting the form, you consent to this data collection as outlined. For more details, please refer to our Privacy Policy.</p>
-            </div>
-            <div className="mt-6 flex justify-end">
-                <button 
-                    type="button" 
-                    onClick={() => setIsPrivacyModalOpen(false)} 
-                    className="px-4 py-2 bg-indigo-600 text-white text-base font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                    Close
-                </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Use InfoModal for Privacy Policy */}
+      <InfoModal 
+        isOpen={isPrivacyModalOpen} 
+        onClose={() => setIsPrivacyModalOpen(false)} 
+        title="KYD Data Collection Practices"
+      >
+        <p>KYD collects the information you submit through this form for the purpose of qualifying interest in our services. In addition to the information you provide, we automatically collect the following session-level metadata:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4">
+            <li>Your IP address</li>
+            <li>Approximate geolocation (country, region, city)</li>
+            <li>Browser type and version</li>
+            <li>Device type (e.g., mobile, desktop)</li>
+            <li>Operating system</li>
+            <li>Preferred browser language</li>
+            <li>Referral URL</li>
+            <li>Time of submission (UTC)</li>
+        </ul>
+        <p>This information is used to protect against spam, understand who is contacting us, improve our marketing efforts, and deliver relevant responses to legitimate business contacts.</p>
+        <p>All data is stored securely and is only accessible to authorized team members. We do not sell your personal information or share it with third parties without your consent.</p>
+        <p>By submitting the form, you consent to this data collection as outlined. For more details, please refer to our Privacy Policy.</p>
+      </InfoModal>
     </section>
   );
 };

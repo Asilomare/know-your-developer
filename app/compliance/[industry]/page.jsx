@@ -4,7 +4,8 @@ import { ChevronRight } from 'lucide-react'; // For breadcrumbs
 
 // Function to generate metadata for each industry page
 export async function generateMetadata({ params }) {
-  const industry = complianceData.industries.find(ind => ind.slug === params.industry);
+  const awaitedParams = await params;
+  const industry = complianceData.industries.find(ind => ind.slug === awaitedParams.industry);
   if (!industry) {
     return {
       title: 'Industry Compliance Information Not Found',
@@ -44,7 +45,7 @@ export default function IndustryCompliancePage({ params }) {
 
   return (
     <div className="bg-gray-50 py-12 sm:py-16">
-      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Breadcrumbs */}
         <nav className="flex items-center text-sm font-medium text-gray-500 mb-8" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-indigo-600">Home</Link>
