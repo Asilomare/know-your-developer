@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
             <div>
               <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                <span className="block">Know Your Developer</span>
+                <span className="block">Know Your Developer™</span>
                 <span className="block text-indigo-600">Hire Freelance Talent with Confidence</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">

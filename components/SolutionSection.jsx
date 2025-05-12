@@ -15,7 +15,7 @@ const SolutionSection = () => {
         <div className="lg:text-center">
           <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">The Solution</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Introducing Know Your Developer (KYD)
+            Introducing Know Your Developer™ (KYD)
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
             KYD is an intuitive, automated solution that verifies the identity, reputation, and technical skills of freelance developers. Our platform protects your business by identifying and eliminating over 60 common scams and risks.

@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-             <span className="font-bold text-xl text-white">Know Your Developer</span>
+             <span className="font-bold text-xl text-white">Know Your Developer™</span>
             <p className="text-gray-400 text-base">
               Verifying freelance technical talent for secure and reliable project delivery.
             </p>
@@ -26,7 +26,7 @@ const Footer = () => {
               </a>
             </div> */}
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-8 xl:mt-0 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Navigation</h3>
@@ -45,9 +45,8 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className="md:grid md:grid-cols-1 md:gap-8">
               <div>
-                {/* Placeholder for Legal links */}
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li>
@@ -70,19 +69,27 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-               {/* Optional: Add Company links */}
-              {/* <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  <li><a href="#" className="text-base text-gray-300 hover:text-white">About</a></li>
-                  <li><a href="#" className="text-base text-gray-300 hover:text-white">Contact</a></li>
+            </div>
+            <div className="md:grid md:grid-cols-1 md:gap-8">
+               <div>
+                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact</h3>
+                <ul role="list" className="mt-4 space-y-4 text-base text-gray-300">
+                  <li>
+                    <p>Harrison Oliver, CEO</p>
+                    <p>Know Your Developer™</p>
+                  </li>
+                  <li>Email: <a href="mailto:contact@knowyourdeveloper.ai" className="hover:text-white">contact@knowyourdeveloper.ai</a></li>
+                  <li>Phone: <a href="tel:+13024023028" className="hover:text-white">+1 302 402 3028</a></li>
+                  {/* Fax removed as requested in subsequent message, kept here commented for history 
+                  <li>Fax: +1 302 800 2569</li> 
+                  */}
                 </ul>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
         <div className="mt-12 border-t border-gray-700 pt-8">
-          <p className="text-base text-gray-400 xl:text-center">&copy; {currentYear} Know Your Developer. All rights reserved.</p>
+          <p className="text-base text-gray-400 xl:text-center">&copy; {currentYear} Know Your Developer™. All rights reserved.</p>
         </div>
       </div>
 
@@ -106,7 +113,7 @@ const Footer = () => {
         onClose={() => setIsTermsModalOpen(false)} 
         title="Terms of Service"
       >
-        <p>These are the terms and conditions governing the use of the Know Your Developer (KYD) website and future services.</p>
+        <p>These are the terms and conditions governing the use of the Know Your Developer™ (KYD) website and future services.</p>
         {/* TODO: Add full terms of service text here */}
         {/* <p className="mt-4 font-semibold">Please replace this with the full, official Terms of Service content.</p> */}
       </InfoModal>
