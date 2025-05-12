@@ -9,7 +9,6 @@ import PatentPendingSection from '@/components/PatentPendingSection';
 import ComplianceSection from '@/components/ComplianceSection';
 import CredibilitySection from '@/components/CredibilitySection';
 import SignupSection from '@/components/SignupSection';
-import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -24,7 +23,6 @@ export default function Home() {
         <CredibilitySection />
       </main>
       <SignupSection />
-      <Footer />
     </div>
   );
 }

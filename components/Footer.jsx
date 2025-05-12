@@ -1,13 +1,9 @@
 'use client';
-import React, { useState } from 'react';
-import InfoModal from './InfoModal'; // Import the InfoModal component
+import React from 'react';
+import Link from 'next/link'; // Import Link for navigation
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  // State for modals
-  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
-  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
 
   return (
     <footer className="bg-gray-800">
@@ -50,22 +46,14 @@ const Footer = () => {
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li>
-                    <button 
-                      type="button" 
-                      onClick={() => setIsPrivacyModalOpen(true)} 
-                      className="text-base text-gray-300 hover:text-white focus:outline-none"
-                    >
+                    <Link href="/tos" className="text-base text-gray-300 hover:text-white">
                       Privacy
-                    </button>
+                    </Link>
                   </li>
                   <li>
-                    <button 
-                      type="button" 
-                      onClick={() => setIsTermsModalOpen(true)} 
-                      className="text-base text-gray-300 hover:text-white focus:outline-none"
-                    >
+                    <Link href="/tos" className="text-base text-gray-300 hover:text-white">
                       Terms
-                    </button>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -92,31 +80,6 @@ const Footer = () => {
           <p className="text-base text-gray-400 xl:text-center">&copy; {currentYear} Know Your Developer™. All rights reserved.</p>
         </div>
       </div>
-
-      {/* Privacy Modal */}
-      <InfoModal 
-        isOpen={isPrivacyModalOpen} 
-        onClose={() => setIsPrivacyModalOpen(false)} 
-        title="Privacy Policy"
-      >
-        {/* Reusing the same content from SignupSection for demonstration */}
-        <p>KYD™ collects the information you submit through the waitlist form for the purpose of qualifying interest in our services. In addition to the information you provide, we automatically collect session-level metadata like IP address, approximate geolocation, browser/device details, language, referral URL, and submission time.</p>
-        <p>This information is used to protect against spam, understand our audience, improve marketing, and respond effectively. Data is stored securely, accessed only by authorized personnel, and not sold or shared without consent.</p>
-        <p>Submitting the waitlist form implies consent to this data collection. We utilize standard web technologies like cookies for site functionality and analytics.</p>
-        {/* TODO: Add full privacy policy text here */}
-        <p className="mt-4 font-semibold">Please replace this with the full, official Privacy Policy content.</p>
-      </InfoModal>
-
-      {/* Terms Modal */}
-      <InfoModal 
-        isOpen={isTermsModalOpen} 
-        onClose={() => setIsTermsModalOpen(false)} 
-        title="Terms of Service"
-      >
-        <p>These are the terms and conditions governing the use of the Know Your Developer™ (KYD™) website and future services.</p>
-        {/* TODO: Add full terms of service text here */}
-        {/* <p className="mt-4 font-semibold">Please replace this with the full, official Terms of Service content.</p> */}
-      </InfoModal>
     </footer>
   );
 };
