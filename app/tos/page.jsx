@@ -3,17 +3,16 @@ import React from 'react';
 const TermsOfServicePage = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-8 sm:py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white shadow-lg rounded-lg">
-        <article className="prose lg:prose-xl py-8 sm:py-12 px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg py-8 sm:py-10 lg:py-12 px-6 sm:px-8 lg:px-10">
+        <article className="prose lg:prose-xl max-w-none space-y-6">
           <h1>Know Your Developer Terms of Services</h1>
 
-          <p className="lead">Effective Date: May 1, 2025</p>
+          <p className="text-sm text-gray-600 mt-2 mb-8">Effective Date: May 1, 2025</p>
 
           <h2>1. Acceptance of Terms</h2>
           <p>
             By accessing, submitting information to, or using the KYD website and services, operated by Know Your Developer, LLC, a Delaware limited liability company (&quot;KYD&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), including during the invite-only preview mode, you (&quot;User&quot;, &quot;you&quot;, or &quot;your&quot;) agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, you must not use KYD.
           </p>
-&quot;
           <h2>2. Preview-Mode Notice</h2>
           <p>
             KYD is currently operating in an invite-only, limited-access preview mode. As such, certain features may be incomplete, modified, or removed at any time without notice. You acknowledge and accept that KYD is in a pre-commercial phase.
